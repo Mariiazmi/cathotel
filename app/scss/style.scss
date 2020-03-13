@@ -1,0 +1,686 @@
+@import "vars";
+@import "general";
+
+
+// start header
+.header,
+.footer {
+    padding: 20px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        // justify-content: center;
+    }
+    &__menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        max-width: 425px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            display: block;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+            transition: all .3s;
+            border-radius: 25px;
+            &:hover {
+                background-color: $orange;
+                color: #fff;
+            }
+        }
+    }
+}
+.footer__inner {
+    padding-bottom: 20px;
+}
+.logo {
+    display: block;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+// end header
+
+// start banner
+.banner {
+    min-height: 500px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    overflow-x: hidden;
+    &__overlay {
+        background-repeat: no-repeat;
+    }
+    &__inner {
+        background-repeat: no-repeat;
+        background-position: left;
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__text {
+        // padding-top: 130px;
+        max-width: 450px;
+        width: 100%;
+        span {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    &__img {
+        max-width: 680px;
+        img {
+            max-height: 800px;
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        span {
+            margin-bottom: 10px;
+            font-weight: 700;
+            display: block;
+            font-size: 40px;
+            line-height: 44px;
+        }
+    }
+}
+// end banner
+
+// start advantages
+.advantages {
+    padding-top: 130px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        &:before {
+            position: absolute;
+            content: '';
+            top: -33px;
+            right: 93px;
+            background-image: url(../img/icons/paw-right.png);
+            width: 456px;
+            height: 425px;
+            background-repeat: no-repeat;
+            animation: rotateInDownRight 1s;
+        }
+    }
+    &__item {
+        max-width: 370px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+        border-radius: 8px;
+        text-align: center;
+        transition: all .3s;
+        z-index: 2;
+        flex-basis: calc(33.3333% - 30px);
+        width: 100%;
+        &-icon {
+            margin: 0 auto;
+            padding-top: 10px;
+            margin-bottom: 30px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: $yellow;
+            svg {
+                width: 70px;
+                height: 70px;
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+        &:hover {
+            box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.4);
+        }
+    }
+    
+    &__title {
+        margin: 0;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 30px;
+    }
+    &__text {
+        margin: 0;
+    }
+}
+// end advantages
+
+// start rooms
+.rooms {
+    padding-bottom: 70px;
+    &__item {
+        position: relative;
+        z-index: 5;
+        margin-bottom: 25px;
+        &-img {
+            max-width: 600px;
+            width: 100%;
+            height: 405px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        &-info {
+            position: absolute;
+            padding: 40px 100px;
+            background-color: #fff;
+            border-radius: 10px;
+            top: 60px;
+            right: 170px;
+            box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+        }
+        &-title {
+            margin: 0;
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 25px;
+            a {
+                outline: none;
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-list {
+            margin: 0;
+            margin-bottom: 30px;
+            padding: 0;
+            list-style: none;
+            li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 10px;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background-color: $yellow;
+                    left: 0;
+                    top: 5px;
+                    border-radius: 50%;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    &__slider {
+        margin-bottom: 55px;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            top: -50px;
+            left: -19%;
+            background-image: url(../img/icons/fish.svg);
+            width: 484px;
+            height: 151px;
+            background-repeat: no-repeat;
+            opacity: .15;
+            z-index: -1;
+            animation: swing 1s;
+        }
+    }
+}
+// end rooms
+
+// start testomonial
+.testimonial {
+    position: relative;
+    padding-bottom: 70px;
+    &__inner {
+        &:before {
+        position: absolute;
+        content: '';
+        top: -200px;
+        right: 0;
+        background-image: url(../img/icons/paw-big.svg);
+        width: 298px;
+        height: 314px;
+        background-repeat: no-repeat;
+        opacity: .15;
+        }
+    }
+    &__item {
+        max-width: 470px;
+        margin-right: 30px;
+        padding: 35px;
+        padding-left: 70px;
+        margin-bottom: 55px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+        border-radius: 8px;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '"';
+            width: 27px;
+            height: 56px;
+            font-weight: 500;
+            font-size: 72px;
+            line-height: 86px;
+            color: $yellow;
+            left: 35px;
+            top: 21px;
+        }
+        &-text {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        &-author {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-name,
+        &-date {
+            color: $grey;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}
+// end testimonial
+
+// start contacts
+.contacts {
+    background-color: $yellow;
+    .section__title {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__info {
+        width: 40%;
+        padding: 70px 0;
+        &-box {
+            max-width: 370px;
+            margin: 0 auto;
+            margin-right: 0;
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 15px;
+        }
+        &-bold {
+            font-weight: 700;
+        }
+    }
+    &__map {
+        width: 60%;
+    }
+}
+// end contacts
+
+// start page rooms
+.hotel-rooms__content {
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.filter-aside {
+    display: none;
+    border-radius: 10px;
+}
+// start aside
+.hotel-rooms__aside {
+    max-width: 210px;
+    width: 100%;
+    margin-right: 30px;
+    &-title {
+        display: block;
+        margin: 0;
+        margin: 20px 0;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    &-btn {
+        display: block;
+        padding: 10px 35px;
+        border: 2px solid #FAC663;
+        background-color: #fff;
+        border-radius: 25px;
+        font-size: 14px;
+        line-height: 17px;
+        transition: all .3s;
+        outline: none;
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+}
+.aside__price {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #E1E1E1;
+    background-color: #fff;
+    & + .aside__price {
+        margin-left: 6px;
+    }
+}
+.checkbox {
+    display: block;
+    margin-bottom: 15px;
+        input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+    }
+}
+.checkbox__text {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+.checkbox__text:before {
+	position: absolute;
+    content: '';
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 1px solid #E1E1E1;
+    background-color: #fff;
+	transition: .2s;
+}
+.checkbox input:checked + .checkbox__text:before {
+    background-repeat: no-repeat;
+    background-position: center;
+	background-image: url(../img/icons/checked.svg);
+}
+// end aside
+
+// start rooms items
+.hotel-rooms__top {
+    .btn {
+        display: none;
+        padding: 10px 20px 10px 40px;
+        &:after {
+            display: none;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            background-image: url(../img/icons/filter.svg);
+            background-repeat: no-repeat;
+            width: 12px;
+            height: 15px;
+            left: 20px;
+            top: 13px;
+        }
+    }
+}
+.hotel-rooms__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.hotel-rooms__items {
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    &:before {
+        position: absolute;
+        content: '';
+        top: -33px;
+        right: 93px;
+        background-image: url(../img/icons/paw-right.png);
+        width: 456px;
+        height: 425px;
+        background-repeat: no-repeat;
+        animation: rotateInDownRight 1.5s;
+        z-index: -1;
+    }
+}
+.hotel__room {
+    max-width: 270px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 6px;
+    flex-basis: calc(33.3333% - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    &-img {
+        display: block;
+        width: 100%;
+        height: 185px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        opacity: .8;
+        transition: all .3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &-info {
+        padding: 25px 20px;
+        background-color: #fff;
+        .btn {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    &-title {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-list {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 17px;
+        li {
+            margin-bottom: 10px;
+            img {
+                bottom: 0;
+                margin-left: 6px;
+            }
+        }
+        &-price {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+.rooms {
+    .btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.hidden-tooltip {
+    opacity: 0;
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px solid $yellow;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    border-radius: 4px;
+    top: -38px;
+    left: 0px;
+    width: max-content;
+    &::before, &::after {
+        content: ''; 
+        position: absolute;
+        left: 5px; 
+        bottom: -20px;
+        border: 10px solid transparent;
+        border-top: 10px solid $yellow;
+        
+       }
+       &::after {
+        border-top: 10px solid white;
+        bottom: -18px; 
+       }
+    &-box {
+        position: relative;
+        &:hover .hidden-tooltip {
+            opacity: 1;
+            transition: all .5s;
+        }
+    }
+}
+// end rooms items
+.page__banner {
+    margin: 140px 0;
+    padding: 80px 0;
+    padding-left: 270px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .bold {
+        display: block;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 43px;
+    }
+    .big {
+        font-size: 56px;
+        line-height: 66px;
+    }
+    p {
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+}
+
+// end page rooms
+
+// start description room
+.description {
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 250px;
+            background-image: url(../img/icons/paw.png);
+            width: 411px;
+            height: 403px;
+            background-repeat: no-repeat;
+            animation: rotateInDownRight 1s;
+        }
+    }
+    .description__slider {
+        max-width: 500px;
+        width: 100%;
+        margin-right: 30px;
+        &-item {
+            height: 400px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+        }
+    }
+    &__list {
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 10px;
+        }
+        span {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        &-add {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.description__slider-nav {
+    margin-right: 30px;
+    width: 100px;
+    &-item {
+        width: 107px;
+        height: 122px;
+        border-radius: 5px;
+        overflow: hidden;
+        div {
+            width: 107px;
+            height: 122px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+// end description room
+
+@import "media";
